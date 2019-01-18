@@ -5,7 +5,7 @@ RUN apt-get update \
     && apt-get -y --no-install-recommends install  php7.1-mysql php7.1-intl php7.1-mbstring php7.1-sqlite3\
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
-
+ADD ./application /var/www/myapp
 
 # CMD ['php','cake.php','migrations','migrate','../config/Snapshot/3.11.0/20171129034724_V3130.php']
 
